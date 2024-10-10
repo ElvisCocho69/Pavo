@@ -5,11 +5,11 @@ import jakarta.validation.constraints.*;
 import lombok.Data;
 
 @Data
-@Schema(
-        name = "Product",
-        description = "Schema to hold products information"
-)
+@Schema(name = "Product", description = "Schema to hold products information")
 public class ProductDto {
+
+    @Schema(description = "Id of product", example = "1")
+    private Long productId;
 
     @Schema(description = "Name of product", example = "Laptop")
     @NotEmpty(message = "Name cannot be empty")

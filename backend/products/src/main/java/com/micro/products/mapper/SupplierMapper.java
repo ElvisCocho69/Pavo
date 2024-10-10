@@ -6,6 +6,7 @@ import com.micro.products.entity.Supplier;
 public class SupplierMapper {
 
     public static Supplier mapToSupplier(SupplierDto supplierDto, Supplier supplier) {
+        supplier.setSupplierId(supplierDto.getSupplierId());
         supplier.setName(supplierDto.getName());
         supplier.setPhone(supplierDto.getPhone());
         supplier.setEmail(supplierDto.getEmail());
@@ -14,6 +15,7 @@ public class SupplierMapper {
     }
 
     public static SupplierDto mapToSupplierDto(Supplier supplier, SupplierDto supplierDto) {
+        supplierDto.setSupplierId(supplier.getSupplierId());
         supplierDto.setName(supplier.getName());
         supplierDto.setPhone(supplier.getPhone());
         supplierDto.setEmail(supplier.getEmail());

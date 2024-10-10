@@ -8,11 +8,11 @@ import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 @Data
-@Schema(
-        name = "Supplier",
-        description = "Schema to hold information about a supplier"
-)
+@Schema(name = "Supplier", description = "Schema to hold information about a supplier")
 public class SupplierDto {
+
+    @Schema(description = "Id of supplier", example = "1")
+    private Long supplierId;
 
     @Schema(description = "Supplier name", example = "Amazon")
     @NotEmpty(message = "Supplier name cannot be empty")

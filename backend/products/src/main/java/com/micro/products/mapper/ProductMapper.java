@@ -6,6 +6,7 @@ import com.micro.products.entity.Product;
 public class ProductMapper {
 
     public static Product mapToProduct(ProductDto productDto, Product product) {
+        product.setProductId(productDto.getProductId());
         product.setName(productDto.getName());
         product.setDescription(productDto.getDescription());
         product.setPrice(productDto.getPrice());
@@ -16,6 +17,7 @@ public class ProductMapper {
     }
 
     public static ProductDto mapToProductDto(Product product, ProductDto productDto) {
+        productDto.setProductId(product.getProductId());
         productDto.setName(product.getName());
         productDto.setDescription(product.getDescription());
         productDto.setPrice(product.getPrice());

@@ -6,11 +6,11 @@ import jakarta.validation.constraints.Size;
 import lombok.Data;
 
 @Data
-@Schema(
-        name = "Category",
-        description = "Schema to hold information about category"
-)
+@Schema(name = "Category", description = "Schema to hold information about category")
 public class CategoryDto {
+
+    @Schema(description = "Id of category", example = "1")
+    private Long categoryId;
 
     @Schema(description = "Name of category", example = "Electronics")
     @NotEmpty(message = "Name cannot be empty")
